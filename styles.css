@@ -1,0 +1,22 @@
+body{
+  background-color: yellow;
+}
+h1{
+  text-align: center;
+}
+span{
+  font-family: helvetica;
+  font-size: 120px;
+  text-align: center;
+}
+
+.hours::after{
+  content: ":";
+}
+
+
+.minutes::after{
+  content: ":";
+}
+
+.hours
