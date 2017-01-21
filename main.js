@@ -1,8 +1,3 @@
-
-
-
-
-
 (function(){
   "use strict";
 
@@ -23,7 +18,8 @@
     minutes.textContent = m;
     seconds.textContent = s;
 
-    var timeline = s / 60 * 100;
+    var timeline = s / 60 * 50;
+    console.log(timeline);
 
 
     document.getElementById("timeBar").style.width = timeline + "%";
@@ -35,12 +31,9 @@ document.body.style.backgroundColor=color;
 
 
 
-    setInterval(showTime, 1000);// updates the function, showTime every 1000ms or 1 second.
-console.log(color)
+    // updates the function, showTime every 1000ms or 1 second.
+
   }
-
-  // setInterval(showTime, 1000);// updates the function, showTime every 1000ms or 1 second.
-
   showTime();
-
+setInterval(showTime, 1000);
 }());
