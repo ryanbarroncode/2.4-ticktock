@@ -2,7 +2,7 @@
   "use strict";
 
   var isHovering = false;
-  var clockFace = document.querySelector('.clock');
+  var clockFace = document.querySelector('.clock');var clockFace = document.querySelector('.clock');
 
   clockFace.addEventListener('mouseover', handleMouseover)
   clockFace.addEventListener('mouseout', handleMouseout)
@@ -19,12 +19,12 @@
   function showTime(){
 
     var clock = new Date(); //new date is a how you start getting the time
-    var h = ('0' + clock.getHours()).slice(-2); //gets the hour value
-    var m = ('0' + clock.getMinutes()).slice(-2); //gets the minute value
+    var h = ('0' + clock.getHours()).slice(-2); //gets the hour value and slice only keeps the two numbers from the right.
+    var m = ('0' + clock.getMinutes()).slice(-2); //gets the minute value / also this is where the ifis hovering grabs the time from
     var s = ('0' + clock.getSeconds()).slice(-2); //gets the second value
 
     var hHex = ('0' + clock.getHours().toString(16)).slice(-2);
-    var mHex = ('0' + clock.getMinutes().toString(16)).slice(-2);
+    var mHex = ('0' + clock.getMinutes().toString(16)).slice(-2); // this is where the hexvalue gets used in the else statement.
     var sHex = ('0' + clock.getSeconds().toString(16)).slice(-2);
 
     var hours = document.querySelector('.clock .hours');//targets the hour in html
@@ -42,12 +42,7 @@
       seconds.textContent = s;
     }
 
-    // function colorCode(hours, minutes, seconds){
-    //   hours = ('0' + hours).slice(-2).toString(16);
-    //   hours = ('0' + minutes).slice(-2).toString(16);
-    //   hours = ('0' + seconds).slice(-2).toString(16);
-    //   return '#' + hours + minutes + seconds;
-    // }
+
 
 
     var timeline = s / 60 * 100;// this is the code for making the timeline or the expanding bar move. at a perccentage
@@ -65,5 +60,5 @@
 
   }
   showTime();
-setInterval(showTime, 1000);
+setInterval(showTime, 20);
 }());
