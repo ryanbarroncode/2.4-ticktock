@@ -1,44 +1,23 @@
-
-body{
-}
-
-.gradient {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #836997;
-}
-
-h1{display: inline-block;
-  position: relative;
-  top: 250px;
-  left: 36%;
+body {
   text-align: center;
+  color: #eae9f2;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: 70vh;
+  margin-top: 250px;
+  overflow: hidden;
 }
-span{
-  font-family: helvetica;
-  font-size: 120px;
+
+h1 {
+  display: inline-block;
+  font-size: 80px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#bar {
+  width: 100%;
+  height: 2px;
+  background-color: #eae9f2;
   text-align: center;
-  color: white;
-  text-shadow: -6px -5px 6px rgba(0, 0, 0, 1);
-}
-
-.hours::after{
-  content: ":";
-}
-
-
-.minutes::after{
-  content: ":";
-}
-
-.timeBar{
-  position: relative;
-  top: 410px;
-  height: 10px;
-  background-color: white;
-  text-align: center;
-  width: 50%;
 }
